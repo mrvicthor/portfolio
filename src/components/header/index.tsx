@@ -35,6 +35,7 @@ const Header = ({ toggleTheme, lightTheme }: ThemeProp) => {
             data-visible={showNav ? "true" : "false"}
           >
             <li
+              onClick={() => setShowNav(false)}
               className={`${
                 lightTheme ? "text-[white]" : "text-[#111517]"
               }  text-3xl md:text-md cursor-pointer nav__link md:py-3 md:text-lg`}
@@ -42,6 +43,7 @@ const Header = ({ toggleTheme, lightTheme }: ThemeProp) => {
               <Link to="/">Home</Link>
             </li>
             <li
+              onClick={() => setShowNav(false)}
               className={`${
                 lightTheme ? "text-[white]" : "text-[#111517]"
               } " text-3xl md:text-md cursor-pointer nav__link md:py-3  md:text-lg`}
@@ -56,6 +58,7 @@ const Header = ({ toggleTheme, lightTheme }: ThemeProp) => {
               <Link to="projects">Projects</Link>
             </li>
             <li
+              onClick={() => setShowNav(false)}
               className={`${
                 lightTheme ? "text-[white]" : "text-[#111517]"
               } text-3xl md:text-md cursor-pointer nav__link md:py-3 md:text-lg`}
