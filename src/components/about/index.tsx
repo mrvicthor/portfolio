@@ -29,8 +29,8 @@ const About = ({ lightTheme }: AboutProps) => {
     },
   };
   return (
-    <section className="px-4 py-8" id="about">
-      <div className="space-y-8  md:max-w-5xl md:mx-auto">
+    <section className="px-8 py-8" id="about">
+      <div className="space-y-8  md:max-w-3xl md:mx-auto">
         <motion.h2
           whileInView={{
             y: [-50, 0],

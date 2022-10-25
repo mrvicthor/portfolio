@@ -62,7 +62,7 @@ const Project = ({ lightTheme }: ProjectProps) => {
 
   return (
     <section className="px-4 py-16" id="projects">
-      <div className="space-y-8 md:max-w-5xl md:mx-auto">
+      <div className="space-y-8 md:max-w-3xl md:mx-auto">
         <motion.h2
           whileInView={{
             x: [-50, 0],
@@ -74,7 +74,7 @@ const Project = ({ lightTheme }: ProjectProps) => {
         >
           Project
         </motion.h2>
-        <div className={` grid gap-16 md:grid-cols-2 lg:grid-cols-3 md:gap-10`}>
+        <div className={` grid gap-16 md:grid-cols-2 lg:grid-cols-2 md:gap-10`}>
           {data.map((item) => (
             <ProjectList key={item.id} lightTheme={lightTheme} data={item} />
           ))}

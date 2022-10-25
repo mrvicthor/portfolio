@@ -71,4 +71,12 @@
     width: 55%;
     z-index: 1;
   }
+  .socials::after {
+    content: "";
+    height: 100px;
+    display: block;
+    width: 1px;
+    margin: 0px auto;
+    background-color: white;
+  }
 }
