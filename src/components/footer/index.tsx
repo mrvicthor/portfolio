@@ -11,7 +11,7 @@ type FooterProps = {
 
 const Footer = ({ lightTheme }: FooterProps) => {
   return (
-    <footer className="px-8 py-16">
+    <footer className="py-16">
       <div className={` flex flex-col items-center justify-center`}>
         <div className={` flex gap-4 md:hidden `}>
           <a target="_blank" href="https://www.facebook.com/outtaspace1">

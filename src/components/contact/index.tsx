@@ -25,7 +25,7 @@ const Contact = ({ lightTheme }: ContactProps) => {
     },
   };
   return (
-    <section className="px-8 py-16" id="contact">
+    <section className=" py-16" id="contact">
       <motion.div
         variants={container}
         whileInView="visible"
@@ -33,6 +33,11 @@ const Contact = ({ lightTheme }: ContactProps) => {
         viewport={{ once: false }}
         className={` flex flex-col items-center gap-8 md:max-w-3xl md:mx-auto`}
       >
+        <div
+          className={`h-[1px] w-full ${
+            lightTheme ? "bg-[#D4D4D4] " : "bg-[#2b3945]"
+          }`}
+        />
         <motion.h4
           variants={item}
           className="capitalize text-2xl font-semibold md:text-4xl"

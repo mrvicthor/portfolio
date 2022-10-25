@@ -1,10 +1,22 @@
-import { FaEnvelope } from "react-icons/fa";
+import { motion } from "framer-motion";
 
-const Email = () => {
+type EmailProps = {
+  lightTheme: boolean;
+};
+
+const Email = ({ lightTheme }: EmailProps) => {
   return (
-    <aside className="px-4 md:max-w-5xl md:mx-auto">
-      <div className="  md:bottom-0 md:fixed md:flex md:flex-col">
-        <div className="socials hidden md:flex md:flex-col gap-28 ">
+    <aside className="">
+      <div className="md:bottom-0 md:fixed">
+        <motion.div
+          whileInView={{
+            y: [-50, 0],
+            opacity: [0, 1],
+          }}
+          className={`${
+            lightTheme ? "hover:text-green-300" : "hover:text-orange-300"
+          } hover:scale-[1.1] transition duration-700 ease-in-out socials hidden md:flex md:flex-col items-baseline gap-28`}
+        >
           <a
             className="origin-center rotate-[90deg] tracking-widest"
             target="_blank"
@@ -12,7 +24,7 @@ const Email = () => {
           >
             victoreleanya89@gmail.com
           </a>
-        </div>
+        </motion.div>
       </div>
     </aside>
   );

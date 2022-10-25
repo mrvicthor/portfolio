@@ -29,7 +29,7 @@ const About = ({ lightTheme }: AboutProps) => {
     },
   };
   return (
-    <section className="px-8 py-8" id="about">
+    <section className="py-8" id="about">
       <div className="space-y-8  md:max-w-3xl md:mx-auto">
         <motion.h2
           whileInView={{
@@ -53,7 +53,7 @@ const About = ({ lightTheme }: AboutProps) => {
             y: [-50, 0],
             opacity: [0, 1],
           }}
-          className={`text-left font-[Satisfy] text-4xl px-2 pb-8 ${
+          className={`text-left font-[Satisfy] text-4xl pb-8 ${
             lightTheme ? "text-[#D4D4D4]" : "text-[#111517]"
           } about-header`}
         >

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { BsMoonStars, BsSunFill } from "react-icons/bs";
 import { Link } from "react-scroll";
@@ -11,9 +11,28 @@ interface ThemeProp {
 const Header = ({ toggleTheme, lightTheme }: ThemeProp) => {
   const [showNav, setShowNav] = useState<boolean>(false);
 
+  const [showHeader, setShowHeader] = useState<boolean>(true);
+  const [scrollValue, setScrollValue] = useState<number>(0);
+
+  const showNavbar = () => {
+    if (window.scrollY > scrollValue) {
+      setShowHeader(false);
+    } else {
+      setShowHeader(true);
+    }
+    setScrollValue(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", showNavbar);
+    return () => window.removeEventListener("scroll", showNavbar);
+  }, [scrollValue]);
+
   return (
     <header
-      className={`${lightTheme ? "bg-[#2b3945]" : "bg-[white] "}  relative   `}
+      className={`${lightTheme ? "bg-[#2b3945]" : "bg-[white] "} ${
+        showHeader ? "top-0" : ""
+      }  sticky w-full z-10  `}
     >
       <div className="px-4 py-4 md:max-w-5xl md:mx-auto md:py-0">
         <nav className="flex justify-between items-center gap-4">

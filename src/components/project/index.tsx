@@ -61,14 +61,14 @@ const Project = ({ lightTheme }: ProjectProps) => {
   ];
 
   return (
-    <section className="px-4 py-16" id="projects">
+    <section className="py-16" id="projects">
       <div className="space-y-8 md:max-w-3xl md:mx-auto">
         <motion.h2
           whileInView={{
             x: [-50, 0],
             opacity: [0, 1],
           }}
-          className={`text-left font-[Satisfy] text-4xl px-2 pb-8 ${
+          className={`text-left font-[Satisfy] text-4xl pb-8 ${
             lightTheme ? "text-[#D4D4D4]" : "text-[#111517]"
           } about-header`}
         >
