@@ -61,7 +61,7 @@ const Project = ({ lightTheme }: ProjectProps) => {
   ];
 
   return (
-    <section className="px-4 py-16" id="project">
+    <section className="px-4 py-16" id="projects">
       <div className="space-y-8 md:max-w-5xl md:mx-auto">
         <motion.h2
           whileInView={{

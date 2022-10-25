@@ -25,7 +25,7 @@ const Contact = ({ lightTheme }: ContactProps) => {
     },
   };
   return (
-    <section className="px-4 py-16">
+    <section className="px-4 py-16" id="contact">
       <motion.div
         variants={container}
         whileInView="visible"
