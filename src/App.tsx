@@ -39,9 +39,9 @@ function App() {
               : "bg-[#fafafa] text-[#111517]"
           } px-4 `}
         >
-          <div className="md:grid md:max-w-5xl md:mx-auto md:grid-cols-8">
+          <div className="md:grid md:max-w-5xl md:mx-auto gap-2 md:grid-cols-8">
             <div className="">
-              <Socials />
+              <Socials lightTheme={lightTheme} />
             </div>
             <div className="col-span-6">
               <Banner lightTheme={lightTheme} />
