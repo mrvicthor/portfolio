@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { BsMoonStars, BsSunFill } from "react-icons/bs";
 import { Link } from "react-scroll";
+import { Overlay } from "../index";
 import { motion } from "framer-motion";
 
 interface ThemeProp {
@@ -32,7 +33,7 @@ const Header = ({ toggleTheme, lightTheme }: ThemeProp) => {
     <header
       className={`${lightTheme ? "bg-[#2b3945]" : "bg-[white] "} ${
         showHeader ? "top-0" : ""
-      }  sticky w-full z-10  `}
+      }  sticky w-full z-50 `}
     >
       <div className="px-4 py-4 md:max-w-5xl md:mx-auto md:py-0">
         <nav className="flex justify-between items-center gap-4">
@@ -45,7 +46,9 @@ const Header = ({ toggleTheme, lightTheme }: ThemeProp) => {
               mrvicthor
             </h1>
           </div>
-
+          {showNav ? (
+            <Overlay handleClick={() => setShowNav(!showNav)} />
+          ) : null}
           <ul
             id="primary__navigation"
             className={`${
@@ -119,7 +122,7 @@ const Header = ({ toggleTheme, lightTheme }: ThemeProp) => {
           <div className="flex gap-2 items-center">
             <button
               aria-controls="primary__navigation"
-              className="md:hidden z-10 border-none"
+              className="md:hidden mobile_nav_button border-none"
               onClick={() => setShowNav(!showNav)}
             >
               <span className="sr-only" aria-expanded="false">

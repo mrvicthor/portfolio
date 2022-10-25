@@ -23,7 +23,7 @@ export const ThemeContext = createContext<ContextProps>({
 });
 
 function App() {
-  const [lightTheme, setLightTheme] = useState<boolean>(true);
+  const [lightTheme, setLightTheme] = useState<boolean>(false);
 
   const toggleTheme = () => {
     setLightTheme((prevTheme) => !prevTheme);

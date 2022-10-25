@@ -8,6 +8,7 @@ import Contact from "./contact";
 import Footer from "./footer";
 import Socials from "./socials";
 import Email from "./email";
+import Overlay from "./overlay";
 
 export {
   Header,
@@ -20,4 +21,5 @@ export {
   Footer,
   Socials,
   Email,
+  Overlay,
 };
