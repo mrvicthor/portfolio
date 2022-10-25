@@ -60,7 +60,7 @@ const ProjectList = ({ lightTheme, data }: ProjectProps) => {
             y: [-50, 0],
             opacity: [0, 1],
           }}
-          className="opacity-70 text-lg md:text-md"
+          className="opacity-70 text-lg md:text-md font-thin"
         >
           {data.description}
         </motion.p>

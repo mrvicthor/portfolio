@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { BsMoonStars, BsSunFill } from "react-icons/bs";
 import { Link } from "react-scroll";
+import { motion } from "framer-motion";
 
 interface ThemeProp {
   toggleTheme: () => void;
@@ -30,34 +31,34 @@ const Header = ({ toggleTheme, lightTheme }: ThemeProp) => {
             id="primary__navigation"
             className={`${
               lightTheme ? "bg-[#202c37]" : "bg-[#fafafa]"
-            } primary__navigation flex flex-col gap-4 md:inset-0 md:h-full md:ml-auto md:translate-y-0 md:relative md:flex-row md:bg-transparent md:px-0 md:py-0`}
+            } primary__navigation flex flex-col gap-8 justify-center md:inset-0 md:h-full md:ml-auto md:translate-y-0 md:relative md:flex-row md:bg-transparent md:px-0 md:py-0`}
             data-visible={showNav ? "true" : "false"}
           >
             <li
               className={`${
                 lightTheme ? "text-[white]" : "text-[#111517]"
-              }  text-xl md:text-md cursor-pointer nav__link md:py-3`}
+              }  text-3xl md:text-md cursor-pointer nav__link md:py-3 md:text-lg`}
             >
               <Link to="/">Home</Link>
             </li>
             <li
               className={`${
                 lightTheme ? "text-[white]" : "text-[#111517]"
-              } " text-xl md:text-md cursor-pointer nav__link md:py-3`}
+              } " text-3xl md:text-md cursor-pointer nav__link md:py-3  md:text-lg`}
             >
               <Link to="about">About</Link>
             </li>
             <li
               className={`${
                 lightTheme ? "text-[white]" : "text-[#111517]"
-              }  text-xl md:text-md cursor-pointer nav__link md:py-3`}
+              }  text-3xl md:text-md cursor-pointer nav__link md:py-3 md:text-lg`}
             >
               <Link to="projects">Projects</Link>
             </li>
             <li
               className={`${
                 lightTheme ? "text-[white]" : "text-[#111517]"
-              } text-xl md:text-md cursor-pointer nav__link md:py-3`}
+              } text-3xl md:text-md cursor-pointer nav__link md:py-3 md:text-lg`}
             >
               <Link to="contact">Contact Me</Link>
             </li>

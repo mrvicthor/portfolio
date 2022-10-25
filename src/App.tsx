@@ -1,6 +1,6 @@
 import { useState, createContext } from "react";
 import reactLogo from "./assets/react.svg";
-import { Header, Banner, About, Project } from "./components";
+import { Header, Banner, About, Project, Contact } from "./components";
 import "./App.css";
 
 interface ContextProps {
@@ -35,6 +35,7 @@ function App() {
           <Banner lightTheme={lightTheme} />
           <About lightTheme={lightTheme} />
           <Project lightTheme={lightTheme} />
+          <Contact lightTheme={lightTheme} />
         </main>
       </ThemeContext.Provider>
     </div>

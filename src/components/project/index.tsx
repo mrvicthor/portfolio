@@ -4,7 +4,7 @@ import Clc from "../../assets/clc_proj.png";
 import IpTracker from "../../assets/iptrac_proj.png";
 
 import { motion } from "framer-motion";
-import { ProjectList } from "./../index";
+import { ProjectList, Button } from "./../index";
 type ProjectProps = {
   lightTheme: boolean;
 };
@@ -19,14 +19,6 @@ const Project = ({ lightTheme }: ProjectProps) => {
         delayChildren: 0.3,
         staggerChildren: 0.2,
       },
-    },
-  };
-
-  const item = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
     },
   };
 
@@ -69,7 +61,7 @@ const Project = ({ lightTheme }: ProjectProps) => {
   ];
 
   return (
-    <section className="px-4 py-16">
+    <section className="px-4 py-16" id="project">
       <div className="space-y-8 md:max-w-5xl md:mx-auto">
         <motion.h2
           whileInView={{
@@ -87,6 +79,26 @@ const Project = ({ lightTheme }: ProjectProps) => {
             <ProjectList key={item.id} lightTheme={lightTheme} data={item} />
           ))}
         </div>
+        <motion.div
+          whileInView={{
+            x: [-50, 0],
+            opacity: [0, 1],
+          }}
+          className="flex justify-center pt-6"
+        >
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/mrvicthor?tab=repositories"
+            className={` ${
+              lightTheme
+                ? "bg-[#2b3945] text-[#D4D4D4] hover:text-green-300"
+                : "bg-[white] text-[#111517] hover:text-orange-300"
+            } px-5 py-3 rounded font-medium text-lg capitalize hover:scale-[1.2] transition duration-700 ease-in-out`}
+          >
+            view more projects
+          </a>
+        </motion.div>
       </div>
     </section>
   );

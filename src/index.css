@@ -71,16 +71,4 @@
     width: 55%;
     z-index: 1;
   }
-
-  .carousel {
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-  }
-
-  .carousel__track {
-    position: relative;
-    height: 100%;
-  }
 }
