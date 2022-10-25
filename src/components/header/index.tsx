@@ -35,35 +35,66 @@ const Header = ({ toggleTheme, lightTheme }: ThemeProp) => {
             data-visible={showNav ? "true" : "false"}
           >
             <li
-              onClick={() => setShowNav(false)}
               className={`${
                 lightTheme ? "text-[white]" : "text-[#111517]"
               }  text-3xl md:text-md cursor-pointer nav__link md:py-3 md:text-lg`}
             >
-              <Link to="/">Home</Link>
+              <Link
+                to="/"
+                spy={true}
+                smooth={true}
+                onClick={() => setShowNav(!showNav)}
+              >
+                Home
+              </Link>
             </li>
             <li
-              onClick={() => setShowNav(false)}
               className={`${
                 lightTheme ? "text-[white]" : "text-[#111517]"
               } " text-3xl md:text-md cursor-pointer nav__link md:py-3  md:text-lg`}
             >
-              <Link to="about">About</Link>
+              <Link
+                to="about"
+                activeClass="about"
+                offset={-68}
+                spy={true}
+                smooth={true}
+                onClick={() => setShowNav(false)}
+              >
+                About
+              </Link>
             </li>
             <li
               className={`${
                 lightTheme ? "text-[white]" : "text-[#111517]"
               }  text-3xl md:text-md cursor-pointer nav__link md:py-3 md:text-lg`}
             >
-              <Link to="projects">Projects</Link>
+              <Link
+                onClick={() => setShowNav(false)}
+                to="projects"
+                activeClass="projects"
+                offset={-68}
+                spy={true}
+                smooth={true}
+              >
+                Projects
+              </Link>
             </li>
             <li
-              onClick={() => setShowNav(false)}
               className={`${
                 lightTheme ? "text-[white]" : "text-[#111517]"
               } text-3xl md:text-md cursor-pointer nav__link md:py-3 md:text-lg`}
             >
-              <Link to="contact">Contact Me</Link>
+              <Link
+                to="contact"
+                activeClass="contact"
+                offset={-68}
+                spy={true}
+                smooth={true}
+                onClick={() => setShowNav(false)}
+              >
+                Contact Me
+              </Link>
             </li>
           </ul>
           <div className="flex gap-2 items-center">
