@@ -27,7 +27,7 @@ const Socials = () => {
           <a
             className="origin-center -10 rotate-[90deg] tracking-widest"
             target="_blank"
-            href="https://www.facebook.com/outtaspace1"
+            href="mailto:victoreleanya89@gmail.com"
           >
             victoreleanya89@gmail.com
           </a>
