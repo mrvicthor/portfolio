@@ -76,13 +76,13 @@ const Project = ({ lightTheme }: ProjectProps) => {
             x: [-50, 0],
             opacity: [0, 1],
           }}
-          className={`text-left font-[Satisfy] text-4xl px-2 ${
+          className={`text-left font-[Satisfy] text-4xl px-2 pb-8 ${
             lightTheme ? "text-[#D4D4D4]" : "text-[#111517]"
           } about-header`}
         >
           Project
         </motion.h2>
-        <div className={` grid gap-6 md:grid-cols-2 lg:grid-cols-3`}>
+        <div className={` grid gap-16 md:grid-cols-2 lg:grid-cols-3 md:gap-10`}>
           {data.map((item) => (
             <ProjectList key={item.id} lightTheme={lightTheme} data={item} />
           ))}

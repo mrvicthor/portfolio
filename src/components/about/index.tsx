@@ -29,8 +29,8 @@ const About = ({ lightTheme }: AboutProps) => {
     },
   };
   return (
-    <section className="px-4 py-16">
-      <div className="space-y-8 md:max-w-5xl md:mx-auto">
+    <section className="px-4 py-8">
+      <div className="space-y-8  md:max-w-5xl md:mx-auto">
         <motion.h2
           whileInView={{
             y: [-50, 0],
@@ -53,7 +53,7 @@ const About = ({ lightTheme }: AboutProps) => {
             y: [-50, 0],
             opacity: [0, 1],
           }}
-          className={`text-left font-[Satisfy] text-4xl px-2 ${
+          className={`text-left font-[Satisfy] text-4xl px-2 pb-8 ${
             lightTheme ? "text-[#D4D4D4]" : "text-[#111517]"
           } about-header`}
         >
@@ -64,7 +64,7 @@ const About = ({ lightTheme }: AboutProps) => {
           whileInView="visible"
           initial="hidden"
           viewport={{ once: false }}
-          className="grid grid-cols-3 gap-4 "
+          className="grid grid-cols-3 gap-4"
         >
           <motion.div
             variants={item}

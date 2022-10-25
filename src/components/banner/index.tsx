@@ -19,8 +19,8 @@ const Banner = ({ lightTheme }: ThemeProp) => {
     delaySpeed: 2000,
   });
   return (
-    <section className="py-8 px-4">
-      <div className="flex flex-col items-center py-12 gap-4">
+    <section className="py-8 px-4 h-screen">
+      <div className="flex flex-col items-center justify-center h-full gap-4">
         <motion.div
           whileInView={{ opacity: [0, 1] }}
           transition={{ duration: 0.5, delayChildren: 0.5 }}
