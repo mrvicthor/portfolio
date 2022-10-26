@@ -7,7 +7,7 @@ type EmailProps = {
 const Email = ({ lightTheme }: EmailProps) => {
   return (
     <aside className="">
-      <div className="md:bottom-0 md:fixed">
+      <div className="md:bottom-0 md:fixed md:-m-[4%] lg:-m-[1%]">
         <motion.div
           whileInView={{
             y: [-50, 0],
@@ -18,7 +18,7 @@ const Email = ({ lightTheme }: EmailProps) => {
           } hover:scale-[1.1] transition duration-700 ease-in-out socials hidden md:flex md:flex-col items-baseline gap-28`}
         >
           <a
-            className="origin-center rotate-[90deg] tracking-widest"
+            className="rotate-[90deg] tracking-widest"
             target="_blank"
             href="https://www.facebook.com/outtaspace1"
           >
