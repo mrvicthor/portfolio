@@ -29,6 +29,14 @@ const Header = ({ toggleTheme, lightTheme }: ThemeProp) => {
     return () => window.removeEventListener("scroll", showNavbar);
   }, [scrollValue]);
 
+  useEffect(() => {
+    if (showNav === true) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "visible";
+    }
+  }, [showNav]);
+
   return (
     <header
       className={`${lightTheme ? "bg-[#2b3945]" : "bg-[white] "} ${
