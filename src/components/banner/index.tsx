@@ -1,6 +1,5 @@
-import victor from "../../assets/victor.jpeg";
 import portLogo from "../../assets/portLogo.jpg";
-import { Cursor, useTypewriter } from "react-simple-typewriter";
+
 import { motion } from "framer-motion";
 
 interface ThemeProp {
@@ -8,16 +7,6 @@ interface ThemeProp {
 }
 
 const Banner = ({ lightTheme }: ThemeProp) => {
-  const [text, count] = useTypewriter({
-    words: [
-      "👋 Hi, call me Victor",
-      "Football fan...",
-      "<I-Love-Video-games/>",
-      "<God-of-War-fan/>",
-    ],
-    loop: true,
-    delaySpeed: 2000,
-  });
   return (
     <section className="py-8 h-screen relative z-[10]">
       <div className="flex flex-col items-center justify-center h-full gap-4">
@@ -47,14 +36,23 @@ const Banner = ({ lightTheme }: ThemeProp) => {
           Frontend Developer
         </motion.h1>
         <div>
-          <h2
-            className={`text-3xl px-2 ${
-              lightTheme ? "text-[#fafafa]" : "text-[#DD650C]"
-            }`}
+          <motion.h2
+            whileInView={{
+              y: [-50, 0],
+              opacity: [0, 1],
+            }}
+            className={` ${
+              lightTheme ? "text-[#D4D4D4]" : "text-[#111517]"
+            } text-xl text-center `}
           >
-            {text}
-            <Cursor />
-          </h2>
+            I Can{" "}
+            <span className="text-[#3CA4EC] text-3xl">
+              Automate Your Business
+            </span>
+            <br />
+            With
+            <span className="text-[#3CA4EC] text-3xl"> Good Design</span>
+          </motion.h2>
         </div>
       </div>
     </section>

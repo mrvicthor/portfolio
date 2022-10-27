@@ -3,12 +3,23 @@ import { SiTypescript, SiRedux } from "react-icons/si";
 import { AiOutlineConsoleSql } from "react-icons/ai";
 import { TbBrandJavascript } from "react-icons/tb";
 import { motion } from "framer-motion";
+import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 type AboutProps = {
   lightTheme: boolean;
 };
 
 const About = ({ lightTheme }: AboutProps) => {
+  const [text, count] = useTypewriter({
+    words: [
+      "👋 Hi, call me Victor",
+      "I build things for the web...",
+      "<I-can-turn-design-into-code/>",
+      "<I-also-love-video-games/>",
+    ],
+    loop: true,
+    delaySpeed: 2000,
+  });
   const container = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
@@ -31,23 +42,10 @@ const About = ({ lightTheme }: AboutProps) => {
   return (
     <section className="py-8" id="about">
       <div className="space-y-8  md:max-w-3xl md:mx-auto">
-        <motion.h2
-          whileInView={{
-            y: [-50, 0],
-            opacity: [0, 1],
-          }}
-          className={` ${
-            lightTheme ? "text-[#D4D4D4]" : "text-[#111517]"
-          } text-xl text-center `}
-        >
-          I Can{" "}
-          <span className="text-[#3CA4EC] text-3xl">
-            Automate Your Business
-          </span>
-          <br />
-          With
-          <span className="text-[#3CA4EC] text-3xl"> Good Design</span>
-        </motion.h2>
+        <h2 className={`text-3xl text-center px-2 `}>
+          {text}
+          <Cursor />
+        </h2>
         <motion.h2
           whileInView={{
             y: [-50, 0],
