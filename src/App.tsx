@@ -33,6 +33,7 @@ function App() {
       <ThemeContext.Provider value={{ lightTheme, setLightTheme }}>
         <Header toggleTheme={toggleTheme} lightTheme={lightTheme} />
         <main
+          id="home"
           className={`${
             lightTheme
               ? "bg-[#202c37] text-[white]"

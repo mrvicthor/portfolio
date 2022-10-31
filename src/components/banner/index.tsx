@@ -8,7 +8,7 @@ interface ThemeProp {
 
 const Banner = ({ lightTheme }: ThemeProp) => {
   return (
-    <section className="py-8 h-screen relative z-[10]">
+    <section className="py-8 h-screen relative z-[10]" id="banner">
       <div className="flex flex-col items-center justify-center h-full gap-4">
         <motion.div
           whileInView={{ opacity: [0, 1] }}

@@ -3,7 +3,6 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { BsMoonStars, BsSunFill } from "react-icons/bs";
 import { Link } from "react-scroll";
 import { Overlay } from "../index";
-import { motion } from "framer-motion";
 
 interface ThemeProp {
   toggleTheme: () => void;
@@ -51,7 +50,9 @@ const Header = ({ toggleTheme, lightTheme }: ThemeProp) => {
                 lightTheme ? "text-[white]" : "text-[#111517]"
               } text-2xl font-semibold cursor-pointer`}
             >
-              mrvicthor
+              <Link to="banner" spy={true} smooth={true}>
+                mrvicthor
+              </Link>
             </h1>
           </div>
           {showNav ? (
@@ -70,7 +71,7 @@ const Header = ({ toggleTheme, lightTheme }: ThemeProp) => {
               }  text-3xl md:text-md cursor-pointer nav__link md:py-3 md:text-lg`}
             >
               <Link
-                to="/"
+                to="banner"
                 spy={true}
                 smooth={true}
                 onClick={() => setShowNav(!showNav)}
