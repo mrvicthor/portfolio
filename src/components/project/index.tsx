@@ -2,6 +2,7 @@ import Netflix from "../../assets/netImage.png";
 import WorldApi from "../../assets/rest_port.png";
 import Clc from "../../assets/clc_proj.png";
 import IpTracker from "../../assets/iptrac_proj.png";
+import Audiophile from "../../assets/audiophile.png";
 
 import { motion } from "framer-motion";
 import { ProjectList, Button } from "./../index";
@@ -25,21 +26,20 @@ const Project = ({ lightTheme }: ProjectProps) => {
   const data = [
     {
       id: 1,
+      title: "Audiophile e-Commerce",
+      imgUrl: Audiophile,
+      description: "An e-commerce app where you can purchase audio products.",
+      github: "https://github.com/mrvicthor/audiophile-ecommerce",
+      website: "https://audiophile-ecommerce-nu.vercel.app/",
+    },
+    {
+      id: 2,
       title: "REST Countries API",
       imgUrl: WorldApi,
       description:
         "Responsive web app that displays all countries from an API.",
       github: "https://github.com/mrvicthor/rest-countries-app",
       website: "https://rest-countries-app-snowy.vercel.app/",
-    },
-    {
-      id: 2,
-      title: "Christ Liberty Church",
-      imgUrl: Clc,
-      description:
-        "Website that allows members easily subscribe to church events. ",
-      github: "https://github.com/mrvicthor/clc-app",
-      website: "https://clc-app.vercel.app/",
     },
     {
       id: 3,
