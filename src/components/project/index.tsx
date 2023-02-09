@@ -1,7 +1,6 @@
 import Netflix from "../../assets/netImage.png";
 import WorldApi from "../../assets/rest_port.png";
-import Clc from "../../assets/clc_proj.png";
-import IpTracker from "../../assets/iptrac_proj.png";
+import Myteam from "../../assets/myteam.png";
 import Audiophile from "../../assets/audiophile.png";
 
 import { motion } from "framer-motion";
@@ -51,12 +50,11 @@ const Project = ({ lightTheme }: ProjectProps) => {
     },
     {
       id: 4,
-      title: "IpTracker",
-      imgUrl: IpTracker,
-      description:
-        "IpTracker that can be used to get the location just by using the IP address",
-      github: "https://github.com/mrvicthor/ipAddressTracker",
-      website: "https://ip-address-tracker-beta-rust.vercel.app/",
+      title: "My Team Multipage Website",
+      imgUrl: Myteam,
+      description: "This is a 3-page fully funtional website",
+      github: "https://github.com/mrvicthor/myteam-multiweb",
+      website: "https://myteam-multiweb-kps2p41nq-mrvicthor.vercel.app/",
     },
   ];
 
