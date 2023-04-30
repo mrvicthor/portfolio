@@ -1,4 +1,4 @@
-import Netflix from "../../assets/netImage.png";
+import PhotoSnap from "../../assets/photosnap.png";
 import WorldApi from "../../assets/rest_port.png";
 import Myteam from "../../assets/myteam.png";
 import Audiophile from "../../assets/audiophile.png";
@@ -42,11 +42,11 @@ const Project = ({ lightTheme }: ProjectProps) => {
     },
     {
       id: 3,
-      title: "Netflix Clone",
-      imgUrl: Netflix,
-      description: "A clone of the Netflix Movie App that displays movies.",
-      github: "https://github.com/mrvicthor/netflix-app",
-      website: "https://netflix-app-nu.vercel.app/",
+      title: "Photosnap Multipage Website",
+      imgUrl: PhotoSnap,
+      description: "A marketing site for a photo-sharing app.",
+      github: "https://github.com/mrvicthor/photosnap-multi-page-website",
+      website: "https://photosnap-multi-page-website-nu.vercel.app/",
     },
     {
       id: 4,
