@@ -61,7 +61,7 @@ const About = ({ lightTheme }: AboutProps) => {
           variants={container}
           whileInView="visible"
           initial="hidden"
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="grid grid-cols-3 gap-4"
         >
           <motion.div
