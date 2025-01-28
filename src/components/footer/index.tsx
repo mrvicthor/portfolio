@@ -27,11 +27,11 @@ const Footer = ({ lightTheme }: FooterProps) => {
             <FaTwitterSquare size={24} />
           </a>
         </div>
-        <h5
+        <small
           className={`${lightTheme ? "text-[#D4D4D4]" : "text-[#111517]"} mt-4`}
         >
-          Copyright © 2022 & Designed by Victor Eleanya
-        </h5>
+          Copyright © 2025 & Designed by Victor Eleanya
+        </small>
       </div>
     </footer>
   );

@@ -1,10 +1,10 @@
 import PhotoSnap from "../../assets/photosnap.png";
-import WorldApi from "../../assets/rest_port.png";
+import HangmanImage from "../../assets/hangman-game.png";
 import Myteam from "../../assets/myteam.png";
 import Audiophile from "../../assets/audiophile.png";
 
 import { motion } from "framer-motion";
-import { ProjectList, Button } from "./../index";
+import { ProjectList } from "./../index";
 type ProjectProps = {
   lightTheme: boolean;
 };
@@ -33,12 +33,11 @@ const Project = ({ lightTheme }: ProjectProps) => {
     },
     {
       id: 2,
-      title: "REST Countries API",
-      imgUrl: WorldApi,
-      description:
-        "Responsive web app that displays all countries from an API.",
-      github: "https://github.com/mrvicthor/rest-countries-app",
-      website: "https://rest-countries-app-snowy.vercel.app/",
+      title: "Hangman Game",
+      imgUrl: HangmanImage,
+      description: "Responsive Hangman Game App.",
+      github: "https://github.com/mrvicthor/hangman-game",
+      website: "https://hangman-game-app.vercel.app/",
     },
     {
       id: 3,
